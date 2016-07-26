@@ -10,6 +10,7 @@
 		3817F5C61D3A91E60025B7C3 /* OctoConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3817F5C51D3A91E60025B7C3 /* OctoConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3817F5CD1D3A91E60025B7C3 /* OctoConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3817F5C21D3A91E60025B7C3 /* OctoConnect.framework */; };
 		3817F5D21D3A91E60025B7C3 /* OctoConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F5D11D3A91E60025B7C3 /* OctoConnectTests.swift */; };
+		386E8B5C1D47B59C0069F299 /* OctoConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 386E8B5B1D47B59C0069F299 /* OctoConnect.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		3817F5CC1D3A91E60025B7C3 /* OctoConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctoConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3817F5D11D3A91E60025B7C3 /* OctoConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctoConnectTests.swift; sourceTree = "<group>"; };
 		3817F5D31D3A91E60025B7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		386E8B5B1D47B59C0069F299 /* OctoConnect.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OctoConnect.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		3817F5B81D3A91E60025B7C3 = {
 			isa = PBXGroup;
 			children = (
+				386E8B5B1D47B59C0069F299 /* OctoConnect.podspec */,
 				3817F5C41D3A91E60025B7C3 /* OctoConnect */,
 				3817F5D01D3A91E60025B7C3 /* OctoConnectTests */,
 				3817F5C31D3A91E60025B7C3 /* Products */,
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386E8B5C1D47B59C0069F299 /* OctoConnect.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +384,7 @@
 				3817F5D81D3A91E60025B7C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3817F5D91D3A91E60025B7C3 /* Build configuration list for PBXNativeTarget "OctoConnectTests" */ = {
 			isa = XCConfigurationList;
@@ -388,6 +393,7 @@
 				3817F5DB1D3A91E60025B7C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
