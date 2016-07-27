@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'OctoConnect'
   s.version          = '0.1.0'
-  s.summary          = 'A GitHub HTTP Connecting Framework.’
+  s.summary          = 'A GitHub HTTP Connecting Framework.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+# s.description      =
 
   s.homepage         = 'https://github.com/jingweiwoo/OctoConnect'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -30,7 +28,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'OctoConnect/**/*.swift’
+  s.source_files = 'OctoConnect/**/*'
   s.requires_arc = true
   
   # s.resource_bundles = {
@@ -39,5 +37,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Alamofire', '~> 3.4.0’
+  s.dependency 'Alamofire', '~> 3.4.0'
 end
