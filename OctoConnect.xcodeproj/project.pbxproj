@@ -10,7 +10,7 @@
 		3817F5C61D3A91E60025B7C3 /* OctoConnect.h in Headers */ = {isa = PBXBuildFile; fileRef = 3817F5C51D3A91E60025B7C3 /* OctoConnect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3817F5CD1D3A91E60025B7C3 /* OctoConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3817F5C21D3A91E60025B7C3 /* OctoConnect.framework */; };
 		3817F5D21D3A91E60025B7C3 /* OctoConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F5D11D3A91E60025B7C3 /* OctoConnectTests.swift */; };
-		388936A11D484C510030E56E /* OctoConnect.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 388936A01D484C510030E56E /* OctoConnect.podspec */; };
+		388354231E4807EF0000BF72 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388354221E4807EF0000BF72 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 		3817F5CC1D3A91E60025B7C3 /* OctoConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctoConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3817F5D11D3A91E60025B7C3 /* OctoConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctoConnectTests.swift; sourceTree = "<group>"; };
 		3817F5D31D3A91E60025B7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388936A01D484C510030E56E /* OctoConnect.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OctoConnect.podspec; sourceTree = "<group>"; };
+		388354221E4807EF0000BF72 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388354231E4807EF0000BF72 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,10 +56,10 @@
 		3817F5B81D3A91E60025B7C3 = {
 			isa = PBXGroup;
 			children = (
-				388936A01D484C510030E56E /* OctoConnect.podspec */,
 				3817F5C41D3A91E60025B7C3 /* OctoConnect */,
 				3817F5D01D3A91E60025B7C3 /* OctoConnectTests */,
 				3817F5C31D3A91E60025B7C3 /* Products */,
+				388354211E4807EF0000BF72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +88,14 @@
 				3817F5D31D3A91E60025B7C3 /* Info.plist */,
 			);
 			path = OctoConnectTests;
+			sourceTree = "<group>";
+		};
+		388354211E4807EF0000BF72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				388354221E4807EF0000BF72 /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +160,7 @@
 				TargetAttributes = {
 					3817F5C11D3A91E60025B7C3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 					3817F5CB1D3A91E60025B7C3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -181,7 +191,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388936A11D484C510030E56E /* OctoConnect.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -302,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,10 +324,15 @@
 		3817F5D71D3A91E60025B7C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OctoConnect/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -326,16 +340,24 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jingweiwu.OctoConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		3817F5D81D3A91E60025B7C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OctoConnect/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -343,6 +365,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jingweiwu.OctoConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
