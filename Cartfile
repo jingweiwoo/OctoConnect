@@ -1,0 +1,2 @@
+# Require version 4.x
+github "Alamofire/Alamofire" ~> 4.0
